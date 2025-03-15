@@ -32,7 +32,7 @@ class ClientHandler implements Runnable {
 
                 System.out.println("Client [" + clientSocket.getInetAddress() + ":" + clientSocket.getPort() + "]: " + messageFromClient);
 
-                buffWriter.write("Message received");
+                buffWriter.write("Recieved Message: " + messageFromClient);
                 buffWriter.newLine();
                 buffWriter.flush();
 

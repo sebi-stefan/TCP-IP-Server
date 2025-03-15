@@ -46,7 +46,6 @@ public class Server {
                 Socket clientSocket = serverSocket.accept();
                 System.out.println("Client connected from " + clientSocket.getInetAddress() + " on port " + clientSocket.getPort());
 
-                // Create a new thread to handle this client
                 ClientHandler clientHandler = new ClientHandler(clientSocket);
                 new Thread(clientHandler).start();
             }
